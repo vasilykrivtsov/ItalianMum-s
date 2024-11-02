@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/vkladki.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Top">^</button>
+  <!--Scroll JS-->
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html"><img src="img/Logo.png" height="52"></a>
+      <a href="index.html#about">Новости</a>
+      <a href="menu.html">Меню</a>
+      <a href="policy.html">Политика</a>
+    </div>
+   <center><font color="lavander"><h1>Mum's Italy Restoraunt</h1></font></center>
+   <div class="slideshow-container">
+    <!-- Carousel -->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">*Спагетти</div>
+  <img src="img/spagetti.webp" style="width:300" height="500">
+  <div class="text">Вкуснейшие Спагетти</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">*Песто</div>
+  <img src="img/pesto.webp" style="width:300" height="500">
+  <div class="text">Соус Песто</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">*Пицца</div>
+  <img src="img/PizzaL.webp" style="width:300" height="500">
+  <div class="text">Ароматнейшая Пицца</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<center><h2>Новости и История</h2></center>
+<h4 id="#about"> Наш чудесный итальянский ресторанчик расцветает! Мы добавили в меню много новых блюд! <br> Заказывайте только сегодня со скидкой <b>100%</b>! Акция действует на все блюда только сегодня.</h4>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+  <p id="demo"></p>
+  
+
+
+</body>
+</html> 
+
+
+
