@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/vkladki.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Top">^</button>
+  <!--Scroll JS-->
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+    <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html"><img src="img/Logo.png" height="52"></a>
+    <a href="index.html#about">Новости</a>
+    <a href="history.html">Меню</a>
+    <a href="policy.html">Политика</a>
+  </div>
+  <button class="accordion">Спагетти</button>
+<div class="panel">
+  <p>Вкуснейшие Спагетти! С соусом песто, и томатом.</p>
+</div>
+
+<button class="accordion">Пицца</button>
+<div class="panel">
+  <p>Замечательная Пицца! DoDo</p>
+</div>
+
+<button class="accordion">Салат</button>
+<div class="panel">
+  <p>Салат "Курица с ананасами", "Капреза", нарезка сыров</p>
+</div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        </script> 
+        
+</body>
+</html> 
