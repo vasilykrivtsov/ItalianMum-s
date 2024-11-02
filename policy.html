@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/vkladki.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Top">^</button>
+  <!--Scroll JS-->
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html"><img src="img/Logo.png" height="52"></a>
+    <a href="index.html#about">Новости</a>
+    <a href="menu.html">Меню</a>
+    <a href="#politik">Политика</a>
+  </div>
+  <h2><font color="gold"></font></h2>
+
+  <br>
+   <center><font color="green"><h1>Private&Policy</h1></font></center>
+   <div class="slideshow-container">
+    <h3> Сайт не должен нарушать авторские права. Сайт <font color="red"><b>НИЧЕГО не</b></font> пропагандирует. </h3>
+    <h3>Есть жалобы, грустно😢. Отпраьте заявку на <a href="mailto:dehcorporation@ro.ru">почту</a>.</h3>
+</body>
+</html> 
+
